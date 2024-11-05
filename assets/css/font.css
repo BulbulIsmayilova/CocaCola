@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "UnityCRegular";
+  src: url("../fonts/UNITY-REGULAR.TTF");
+}
+
+@font-face {
+  font-family: "UnityCRegularBold";
+  src: url("../fonts/UNITY-BOLD.TTF");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.swiper-slide div {
+  max-width: 234px;
+  max-height: 249px;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+@media only screen and (min-width: 992px) {
+  .swiper-slide-next div {
+    max-width: 584px;
+    max-height: 739px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  .swiper-slide div {
+    max-width: 434px;
+    max-height: 549px;
+  }
+  .swiper-slide-next div {
+    max-width: 584px;
+    max-height: 739px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1465px) {
+  #heroContent {
+    width: max-content;
+  }
+  #HeroSection,
+  #PhoneSection,
+  #SliderSection,
+  #InfoSection {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1050px;
+  }
+  .hero-bottom-vector,
+  .hero-gradient {
+    display: block !important;
+  }
+  #PhoneSectionMobile{
+    display: none;
+  }
+}
+
+.swiper-button-next::after {
+  font-family: inherit !important;
+  content: url("../img/rightArrow.png") !important;
+}
+
+.swiper-button-prev::after {
+  font-family: inherit !important;
+  content: url("../img/leftArrow.png") !important;
+}
+
+.swiper-button-prev {
+  left: 20px !important;
+}
+
+.swiper-button-next {
+  right: 20px !important;
+}
+
+* {
+  font-family: "UnityCRegular";
+}
+
+b {
+  font-family: "UnityCRegularBold" !important;
+}
+
+em {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+button {
+  font-family: "UnityCRegularBold" !important;
+}
+
+.wrapper {
+  max-width: 1784px;
+  padding: 0 10px;
+  margin: auto;
+  width: 100%;
+}
+
+#HeroSection {
+  background: #f40009;
+  clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+}
+
+.sidebar{
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+
+.sidebar-active{
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 999 !important;
+}
+
+#PhoneSection {
+  margin-top: -80px;
+  background: #f40009 url("/assets/img/phoneSection.png") no-repeat center
+    center;
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media only screen and (min-width:992px) {
+  #PhoneSectionMobile{
+    background: #f40009;
+    clip-path: polygon(10% 60%, 100% 0%, 100% 100%, 0% 100%);
+    border-radius: 0 0 24px 24px;
+  }
+}
+
+#PhoneSectionMobile{
+  background: #f40009;
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  border-radius: 0 0 24px 24px;
+}
+
+#SliderSection {
+  background: #f40009;
+  clip-path: polygon(0 0, 100% 0%, 100% 91%, 0% 100%);
+}
+
+#InfoSection {
+  background: #f40009;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 92%);
+}
+
+.swiper-slide,
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 900 !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.accordion-content {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.3s;
+}
+
+.accordion-icon {
+  transition: rotate 0.3s;
+}
+
+.accordion-icon-active {
+  rotate: 180deg;
+}
+
+.accordion-active {
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-height: 400px !important;
+}
