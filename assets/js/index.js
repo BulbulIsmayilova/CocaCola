@@ -1,10 +1,16 @@
 const accordionContent = document.querySelectorAll('.accordion-content')
 const accordionIcon = document.querySelectorAll(".accordion-icon")
 const sidebar = document.getElementById("sidebar")
+const sideContain = document.getElementById("sideContain")
 
 const openSidebar = () => {
-  sidebar.classList.toggle('sidebar-active')
+  sidebar.classList.toggle("sidebar-active")
+  sideContain.classList.toggle("sideContain-active")
 }
+
+sidebar.addEventListener("click", function(e){
+  e.stopPropagation()
+})
 
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
@@ -16,7 +22,7 @@ let swiper = new Swiper(".mySwiper", {
   breakpoints: {
     992: {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 0,
     },
   },
 })

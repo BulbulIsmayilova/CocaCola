@@ -26,6 +26,15 @@ html {
     width: 100%;
     height: 100%;
   }
+  #next-btn{
+    right: 0px !important;
+    width: 80px !important;
+  }
+  
+  #prev-btn {
+    left: 0px !important;
+    width: 80px !important;
+  }
 }
 
 @media only screen and (min-width: 1220px) {
@@ -58,27 +67,29 @@ html {
   .hero-gradient {
     display: block !important;
   }
-  #PhoneSectionMobile{
+  #PhoneSectionMobile {
     display: none;
   }
 }
 
 .swiper-button-next::after {
   font-family: inherit !important;
-  content: url("../img/rightArrow.png") !important;
+  content: "" !important;
 }
 
 .swiper-button-prev::after {
   font-family: inherit !important;
-  content: url("../img/leftArrow.png") !important;
+  content: "" !important;
 }
 
 .swiper-button-prev {
-  left: 20px !important;
+  left: 0px !important;
+  width: 40px !important;
 }
 
 .swiper-button-next {
-  right: 20px !important;
+  right: 0px !important;
+  width: 40px !important;
 }
 
 * {
@@ -110,35 +121,38 @@ button {
   clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
 }
 
-.sidebar{
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
+.sidebar {
+  transform: translateX(300%);
+  transition: .3s ease;
 }
 
+.sideContain{
+  visibility: hidden;
+}
 
-.sidebar-active{
-  opacity: 1 !important;
-  visibility: visible !important;
-  z-index: 999 !important;
+.sideContain-active{
+  visibility: visible;
+}
+
+.sidebar-active {
+  transform: translateX(0);
 }
 
 #PhoneSection {
   margin-top: -80px;
-  background: #f40009 url("/assets/img/phoneSection.png") no-repeat center
-    center;
+  background: #f40009;
   clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-@media only screen and (min-width:992px) {
-  #PhoneSectionMobile{
+@media only screen and (min-width: 992px) {
+  #PhoneSectionMobile {
     background: #f40009;
     clip-path: polygon(10% 60%, 100% 0%, 100% 100%, 0% 100%);
     border-radius: 0 0 24px 24px;
   }
 }
 
-#PhoneSectionMobile{
+#PhoneSectionMobile {
   background: #f40009;
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
   border-radius: 0 0 24px 24px;
